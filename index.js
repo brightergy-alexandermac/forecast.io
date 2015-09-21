@@ -12,7 +12,7 @@ function Forecast(options) {
   this.apiKey = options.apiKey;
 }
 
-function _buildUrl(latitude, longitude, time, options) {
+Forecast.prototype.buildUrl = function(latitude, longitude, time, options) {
     var url = "https://api.forecast.io/forecast/" + this.apiKey + "/" + latitude + "," + longitude;
 
     if (typeof(time) === "number") {
@@ -25,17 +25,17 @@ function _buildUrl(latitude, longitude, time, options) {
     }
 
     return url;
-}
+};
 
 Forecast.prototype.fetch = function(latitude, longitude, time, options) {
     if (!latitude || !longitude) {
         throw new ForecastError("Latitude and longitude are required parameters!");
     }
 
-    var url = _buildUrl(latitude, longitude, time, options);
+    var url = this.buildUrl(latitude, longitude, time, options);
     return new Promise(function(resolve, reject) {
         request.get({ url: url }, function(err, res, body) {
-            var invalidBody = true;
+            var invalidBody;
             if (body) {
                 try {
                     body = JSON.parse(body);
