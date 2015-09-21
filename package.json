@@ -1,0 +1,8 @@
+{
+  "name": "forecast.io",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Alexander Mac",
+  "license": "ISC",
+  "description": "Forecast.io wrapper"
+}
