@@ -4,5 +4,16 @@
   "main": "index.js",
   "author": "Alexander Mac",
   "license": "ISC",
-  "description": "Forecast.io wrapper"
+  "description": "Forecast.io wrapper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brightergy-alexandermac/forecast.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brightergy-alexandermac/forecast.io/issues"
+  },
+  "homepage": "https://github.com/brightergy-alexandermac/forecast.io#readme",
+  "publishConfig": {
+    "registry": "https://npm.brighterlink.io"
+  }
 }
