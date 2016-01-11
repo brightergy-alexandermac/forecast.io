@@ -2,9 +2,9 @@
   "name": "forecast.io",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "Forecast.io wrapper",
   "author": "Alexander Mac",
   "license": "ISC",
-  "description": "Forecast.io wrapper",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brightergy-alexandermac/forecast.io.git"
